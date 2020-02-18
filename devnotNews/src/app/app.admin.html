@@ -1,0 +1,41 @@
+<head>
+    <title>Admin {{dataNews.Title}}</title>
+</head>
+<div class="container">
+    <div class="jumbotron">
+        <h2>Admin Devnot News® Admin</h2>
+    </div>
+    <div align="right"><b>{{dataNews.CreatedDate}}</b></div>
+    <div>
+        <table class="table">
+            <tr>
+                <td>
+                    <b>Haber Başlığı :</b>
+                </td>
+                <td>
+                    <input type="text" name="Title" id="Title" [(ngModel)]="dataNews.Title" size="80">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Haber İçeriği :</b>
+                </td>
+                <td>
+                    <textarea rows="5" cols=80 name="Detail" id="Detail"
+                    [(ngModel)]="dataNews.Detail"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Haber Resimi : </b>
+                </td>
+                <td>
+                    <img src="../assets/images/{{dataNews.Image}}.jpg" width="400px"><br><br>
+                </td>
+            </tr>
+        </table>
+        <div align="center"><button class="btn btn-primary" style="width:50%" name="Image" id="Image"
+                (click)="save()">Güncelle</button>
+        </div>
+    </div>
+</div>
