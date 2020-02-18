@@ -1,0 +1,5 @@
+/**
+ * Generated bundle index. Do not edit.
+ */
+export * from './index';
+export { SOCKET_CONFIG_TOKEN as ɵb, SocketFactory as ɵa } from './src/socket-io.module';

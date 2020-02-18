@@ -1,0 +1,19 @@
+import { Observable } from 'rxjs';
+import { SocketIoConfig } from './config/socket-io.config';
+export declare class WrappedSocket {
+    private config;
+    subscribersCounter: number;
+    ioSocket: any;
+    emptyConfig: SocketIoConfig;
+    constructor(config: SocketIoConfig);
+    of(namespace: string): void;
+    on(eventName: string, callback: Function): void;
+    once(eventName: string, callback: Function): void;
+    connect(): any;
+    disconnect(close?: any): any;
+    emit(eventName: string, data?: any, callback?: Function): any;
+    removeListener(eventName: string, callback?: Function): any;
+    removeAllListeners(eventName?: string): any;
+    fromEvent<T>(eventName: string): Observable<T>;
+    fromOneTimeEvent<T>(eventName: string): Promise<T>;
+}
