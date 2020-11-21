@@ -64,7 +64,7 @@ app.get("/news/:newsId", function (req, res) {
     }
     else {
         var query = { "NewsId": req.params.newsId };
-        mongoClient.find(query, function (err, doc) {
+        mongoClient.findone(query, function (err, doc) {
             res.send(doc);
         })
     }
